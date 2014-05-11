@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.akshaya.ipatra.SchoolDetailActivity$PlaceholderFragment" >
+
+    <TextView
+        android:id="@+id/schoolTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/schoolTitle"
+        android:background="@android:color/darker_gray" />
+
+   <TextView
+        android:id="@+id/todaysintenttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:text="Today's intent : " />
+   
+   
+   <TextView
+        android:id="@+id/todaysintent"
+        android:layout_below="@+id/view1"
+        android:layout_toRightOf="@+id/todaysintenttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="190" />
+
+     <EditText
+         android:id="@+id/yesterdayactual"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/yesterdayintenttitle"
+         android:layout_below="@+id/todaysintent"
+         android:ems="4"
+         android:inputType="numberSigned" >
+       </EditText>   
+        <requestFocus />
+
+     <EditText
+         android:id="@+id/tomorrowactual"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/tomorrowintenttitle"
+         android:layout_below="@+id/yesterdayactual"
+         android:ems="4"
+         android:inputType="numberSigned" >
+	 </EditText>
+
+     <TextView
+         android:id="@+id/tomorrowintenttitle"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/tomorrowactual"
+         android:layout_alignLeft="@+id/yesterdayintenttitle"
+         android:text="Tomorrow&apos;s need : " />
+
+     <TextView
+         android:id="@+id/yesterdayintenttitle"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/yesterdayactual"
+         android:layout_alignBottom="@+id/yesterdayactual"
+         android:layout_alignLeft="@+id/todaysintenttitle"
+         android:text="Yesterday&apos;s need : " />
+
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true"
+         android:text="Button" />
+
+</RelativeLayout>
